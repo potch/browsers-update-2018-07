@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>This.JS Firefox Browser Update July 2018</title>
+    <meta name="description" content="Possibly the most insightful presentation of all time" />
+
+    <link rel="stylesheet" href="decky.css">
+    <link rel="stylesheet" href="solarized-dark.css">
+    <script src="highlight.min.js"></script>
+  </head>
+  <body>
+
+    <section>
+      <h1>
+        Firefox Update
+      </h1>
+      <h2>July 2018</h2>
+    </section>
+
+    <section>
+      <img src="img/FirefoxRelease.png" style="max-width: 80vw;">
+      <h3><i>previously, on Firefox...</i></h3>
+    </section>
+
+    <section>
+      <img src="img/quantum-suit.jpg" class="cover">
+      <h2 style="text-shadow: 0 0 .5em #000, 0 0 1em #000; margin-top: 20vh;">
+        <span style="font-weight: 500">Firefox</span>
+        <span style="font-weight: 200">Quantum</span>
+      </h2>
+    </section>
+
+    <section>
+      <h2>Web Authentication</h2>
+    </section>
+
+    <section>
+      <h2>ES Modules</h2>
+    </section>
+
+    <section>
+      <h2>WebAssembly</h2>
+      <h3 hide>Rust 💖</h3>
+    </section>
+
+    <section>
+      <h2>WebAssembly</h2>
+      <h3>💖 Rust</h3>
+    </section>
+
+    <section>
+      <h2>Accessibility Inspector</h2>
+    </section>
+
+    <section>
+      <img src="img/delorean.jpg" class="cover">
+      <h2 style="margin-top: calc(var(--slide-height) * .75)">
+        Time-Travel Debugging
+      </h2>
+    </section>
+
+    <style>
+      .csstools {
+        text-align: left;
+        font-size: 1.4em;
+      }
+      .csstools span {
+        color: rgba(255,255,255,.7);
+      }
+      .csstools b {
+        font-weight: 600;
+        font-style: italic;
+      }
+    </style>
+
+    <section>
+      <div class="csstools">
+        <div><span>CSS</span> Flexbox <b hide>Tool</b></div>
+        <div hide><span>CSS</span> Grid <b hide>Tool</b></div>
+        <div hide><span>CSS</span> Shapes <b hide>Tool</b></div>
+        <div hide><span>CSS</span> Variable Fonts <b hide>Tool</b></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="csstools">
+        <div><span>CSS</span> Flexbox <b hide>Tool</b></div>
+        <div><span>CSS</span> Grid <b hide>Tool</b></div>
+        <div hide><span>CSS</span> Shapes <b hide>Tool</b></div>
+        <div hide><span>CSS</span> Variable Fonts <b hide>Tool</b></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="csstools">
+        <div><span>CSS</span> Flexbox <b hide>Tool</b></div>
+        <div><span>CSS</span> Grid <b hide>Tool</b></div>
+        <div><span>CSS</span> Shapes <b hide>Tool</b></div>
+        <div hide><span>CSS</span> Variable Fonts <b hide>Tool</b></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="csstools">
+        <div><span>CSS</span> Flexbox <b hide>Tool</b></div>
+        <div><span>CSS</span> Grid <b hide>Tool</b></div>
+        <div><span>CSS</span> Shapes <b hide>Tool</b></div>
+        <div><span>CSS</span> Variable Fonts <b hide>Tool</b></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="csstools">
+        <div><span>CSS Flexbox</span> <b>Tool</b></div>
+        <div><span>CSS Grid</span> <b>Tool</b></div>
+        <div><span>CSS Shapes</span> <b>Tool</b></div>
+        <div><span>CSS Variable Fonts</span> <b>Tool</b></div>
+      </div>
+    </section>
+
+    <section>
+      <img src="img/webcomponents.svg">
+      <h2>
+        Web Components!
+      </h2>
+    </section>
+
+    <section>
+      <img src="img/webcomponents.svg">
+      <h2>
+        Web Components!
+      </h2>
+      <div style="color:red;font-family:monospace;position:absolute;top:calc(var(--slide-height)*.40);left:calc(var(--slide-width)*.50);transform:translate(-50%,-50%) rotate(20deg);font-size: 6rem;font-weight:bold;-webkit-text-stroke:.1em #000;paint-order:stroke fill;">
+        FINALLY
+      </div>
+    </section>
+
+    <section>
+      <img src="img/firefox-reality.png">
+    </section>
+
+    <section>
+      <h1>WebRender</h1>
+    </section>
+
+    <section>
+      <h1>WebRender</h1>
+      <div style="color:red;font-family:monospace;position:absolute;top:calc(var(--slide-height)*.45);left:calc(var(--slide-width)*.5);transform:translate(-50%,-50%) rotate(-20deg);font-size: 8rem;font-weight:bold;-webkit-text-stroke:.1em #000;paint-order:stroke fill;">
+        SOON
+      </div>
+    </section>
+
+    <section>
+      <h2 style="margin-bottom: 2rem;">Thanks!</h2>
+      <a href="https://twitter.com/potch">@potch</a>
+      <a href="https://hacks.mozilla.org/">Mozilla Hacks Blog</a>
+      <small><a href="https://potch.github.io/browser-update-2018-07/">potch.github.io/browser-update-2018-07</a></small>
+    </section>
+
+    <footer>
+      <div class="progress talk-progress"></div>
+      <div class="progress time-progress"></div>
+    </footer>
+    <script src="decky.js"></script>
+    <script>
+
+      var els = document.querySelectorAll('code[data-src]');
+      Array.from(els).forEach(function (el) {
+        var xhr = new XMLHttpRequest();
+        xhr.addEventListener("load", function () {
+          el.innerHTML = this.responseText.replace('<', '&lt;', 'g');
+          hljs.highlightBlock(el);
+        });
+        xhr.open("GET", el.getAttribute('data-src'));
+        xhr.send();
+      });
+
+      var iframes = document.querySelectorAll('iframe');
+      iframes = Array.from(iframes);
+      iframes.forEach(function (i) {
+        var src = i.src;
+        i.setAttribute('data-src', src);
+        i.src = '';
+      });
+
+      var talkProgress = document.querySelector('.talk-progress');
+      var timeProgress = document.querySelector('.time-progress');
+      var sTime;
+      var timer;
+      var going = false;
+      decky.onSlideChange = function (n) {
+        if (n > 1 && !going) {
+          going = true;
+          timer = setInterval(update, 100);
+          sTime = Date.now();
+          console.log('starting timer');
+        }
+
+        var pct = n / decky.num * 100;
+        talkProgress.style.transform = 'translate(' + pct + '%, 0)';
+
+        iframes.forEach(function (i) {
+          i.src = '';
+        });
+
+        var f = document.querySelector('.active iframe');
+        if (f && window.top === window) {
+          f.src = f.getAttribute('data-src');
+        }
+      };
+      function update() {
+        var time = Math.min(100, ((Date.now() - sTime) / (5 * 60 * 1000)) * 100);
+        timeProgress.style.transform = 'translate(' + time + '%, 0)';
+      }
+    </script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
